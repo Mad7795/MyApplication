@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     //ImageView gambar1, gambar2;
@@ -26,7 +27,44 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra(Intent.EXTRA_TEXT, isi.getText().toString());
                 i.setType("text/plain");
                 startActivity(i);
+                finish();
             }
         });
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(this, "ini onStart 2", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(this, "ini onResume 2", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(this, "ini onPause 2", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(this, "ini onRestart 2", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast.makeText(this, "ini onStop 2", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(this, "ini onDestroy 2", Toast.LENGTH_SHORT).show();
+    }
 }
+
