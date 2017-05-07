@@ -34,7 +34,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(this, "ini onResume 1", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "itu onResume 1", Toast.LENGTH_SHORT).show();
     }
 
     @Override
